@@ -4,13 +4,6 @@ public class Main {
         int initialAccount = 73; //начальная сумма
         int amount = 1000; //пополнение счета
 
-        int condition; //условия
-        if (amount > 1000) {
-            condition = 1;
-        } else {
-            condition = 0;
-        }
-
         int bonus = amount / 100; //количество бонусов
         if (amount < 1000) {
             bonus = 0;
