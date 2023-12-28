@@ -2,28 +2,27 @@ public class Main {
 
     public static void main(String[] args) {
         int initialAccount = 73; //начальная сумма
-        int amount = 100; //пополнение счета
+        int amount = 1000; //пополнение счета
 
-        int bonus;
+        int condition; //условия
         if (amount > 1000) {
-            bonus = 1;
+            condition = 1;
         } else {
+            condition = 0;
+        }
+
+        int bonus = amount / 100; //количество бонусов
+        if (amount < 1000) {
             bonus = 0;
         }
-
-        int quantity = amount / 100; //количество бонусов
-        if (amount < 1000) {
-            bonus = initialAccount + 0;
-        }
-        int result = quantity + initialAccount + amount;
+        int result = bonus + initialAccount + amount;
         if (amount < 1000) {
             result = initialAccount + amount;
         }
         System.out.println("Итоговая сумма: " + result);
+        System.out.println("Количество бонусных рублей: " + bonus);
 
 
 
     }
 }
-
-
